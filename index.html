@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"></header>
+      <main class="main">
+        <div class="game player2">
+          <div class="game__modalwindow">
+            <div class="game__modalwindow-text">
+              Побеждает игрок, первым набравший 5 очков
+            </div>
+            <button class="game__modalwindow-button">Начать игру</button>
+          </div>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <button disabled class="game__field"></button>
+          <div class="game__player1-score">
+            Первый игрок
+            <div class="game__player1-scorecount"></div>
+          </div>
+          <div class="game__player2-score">
+            Второй игрок
+            <div class="game__player2-scorecount"></div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

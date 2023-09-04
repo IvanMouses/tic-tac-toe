@@ -1,0 +1,154 @@
+// ОБНУЛЕНИЕ СТИЛЕЙ
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 16px; /* по умолчанию */
+}
+body {
+  line-height: 1;
+  font-family: "Arial";
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100%;
+  overflow: hidden;
+}
+// СТИЛИ ИГРЫ
+.game {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+
+  // .game__field
+
+  &__field {
+    cursor: pointer;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    font-weight: 800;
+    background-color: grey;
+    border: 1px solid #000;
+    &:disabled {
+      color: #000;
+    }
+  }
+  // .game__player1-score
+
+  &__player1-score {
+    position: absolute;
+    max-width: 200px;
+    top: 20%;
+    left: -70%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  // .game__player2-score
+
+  &__player2-score {
+    position: absolute;
+    max-width: 200px;
+    top: 20%;
+    right: -70%;
+    text-align: center;
+    font-size: 40px;
+  }
+  // .game__player1-scorecount
+
+  &__player1-scorecount {
+    font-size: 80px;
+    margin: 30px 0px 0px 0px;
+    color: #000;
+  }
+  // .game__player2-scorecount
+
+  &__player2-scorecount {
+    font-size: 80px;
+    margin: 30px 0px 0px 0px;
+    color: #000;
+  }
+
+  // .game__modalwindow
+  &__modalwindow {
+    row-gap: 10px;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    top: -50%;
+    border: 1px solid #000;
+  }
+
+  // .game__modalwindow-text
+  &__modalwindow-text {
+    font-size: 20px;
+  }
+
+  // .game__modalwindow-button
+  &__modalwindow-button {
+    background-color: green;
+    padding: 10px;
+    width: 50%;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    &:disabled {
+      color: #000;
+    }
+  }
+}
+.active-player {
+  top: 15%;
+  transition: all 0.5s ease 0s;
+  font-size: 50px;
+  color: green;
+}
+.win-field {
+  background-color: green;
+}
+.draw-field {
+  background-color: orange;
+}
