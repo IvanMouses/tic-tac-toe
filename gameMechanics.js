@@ -34,12 +34,10 @@ function winPattern(player) {
     }
   }
   if (player.winner) {
-    console.log(`${player.name} wins!`);
-    endGame();
+    endGame(player);
   }
   if (maxTurns === 0 && !player.winner) {
-    console.log("Draw!");
-    endGame();
+    endGame(player);
   }
 }
 
@@ -86,9 +84,20 @@ function computerTurn(p) {
   }, 500);
 }
 
-function endGame() {
+function endGame(player) {
   const buttons = document.querySelectorAll(".game-field__button");
   for (const button of buttons) {
     button.disabled = true;
   }
+  const root = document.getElementById("root");
+  const message = document.createElement("div");
+  message.classList.add("message");
+  message.textContent = player.winner ? `${player.name} wins!` : "Draw!";
+  const restartIcon = document.createElement("img");
+  restartIcon.setAttribute("src", "/replay-icon.svg");
+  restartIcon.setAttribute("title", "Restart");
+  restartIcon.classList.add("icon");
+  restartIcon.addEventListener("click", () => location.reload());
+  message.append(restartIcon);
+  root.append(message);
 }
