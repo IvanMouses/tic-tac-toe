@@ -1,0 +1,22 @@
+#root {
+  width: fit-content;
+  margin: 0px auto;
+}
+.game-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+.game-field button {
+  max-width: 50px;
+  max-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.game-field button.matched {
+  background-color: #f7e7dc;
+}
