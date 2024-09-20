@@ -94,7 +94,7 @@ function endGame(player) {
   message.classList.add("message");
   message.textContent = player.winner ? `${player.name} wins!` : "Draw!";
   const restartIcon = document.createElement("img");
-  restartIcon.setAttribute("src", "/replay-icon.svg");
+  restartIcon.setAttribute("src", "./replay-icon.svg");
   restartIcon.setAttribute("title", "Restart");
   restartIcon.classList.add("icon");
   restartIcon.addEventListener("click", () => location.reload());
